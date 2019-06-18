@@ -25,6 +25,7 @@
 
 ## Fixity table
 
+```
 | Prec | Left associative | Non-associative | Right associative |
 |------|------------------|-----------------|-------------------|
 | 9    |                  |                 |                   |
@@ -37,6 +38,7 @@
 | 2    |                  |                 |                   |
 | 1    |                  |                 |                   |
 | 0    |                  | \               |                   |
+```
 
 ## Syntax operators
 
