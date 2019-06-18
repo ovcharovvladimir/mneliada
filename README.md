@@ -25,7 +25,7 @@
 
 ## Fixity table
 
-| ` Prec ` | ` Left associative ` | ` Non-associative ` | ` Right associative ` |
+| **Prec** | **Left associative** | **Non-associative** | **Right associative** |
 |------|------------------|-----------------|-------------------|
 | 9    |                  |                 |                   |
 | 8    |                  |                 |                   |
@@ -40,15 +40,15 @@
 
 ## Syntax operators
 
-| ` Operator ` | ` Description ` |
+| _ Operator ` | ` Description` |
 |----------|-------------|
 | `.`        | Bind        |
 | `\`        | Lambda      |
 | `!`        | Of course   |
 | `>>`       | Pipe        |
-| `a{b}`     | send channel b to channel a |
-| `a[b]`     | receive channel from channel a and bind it to b |
-| `_[a]`    | create scoped fresh channel a |
+| `a{b}`     | send channel `b` to channel `a` |
+| `a[b]`     | receive channel from channel `a` and bind it to `b` |
+| `_[a]`    | create scoped fresh channel `a` |
 
 ## Shugar rules
 
