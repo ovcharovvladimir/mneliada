@@ -1,4 +1,4 @@
-![M N E Li Ad A](./raw-file/docs/MNELIADA.png)
+![](./raw-file/docs/MNELIADA.png)
 
 * Multiplicative
 * Non Commutative
