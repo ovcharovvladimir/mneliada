@@ -45,7 +45,7 @@
 
 ## Syntax operators
 
-| **Syntax**\ \ \         | **Descr**            |
+| **Syntax**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \        | **Descr**            |
 |----------|-------------|
 | `.`        | Bind        |
 | `\`        | Lambda      |
