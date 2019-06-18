@@ -63,6 +63,9 @@
 | `a[b + c]` | `a[b] + a[c]` |
 | `a[[b]]` | `a[c] . c[b]` |
 
+
+
+
 ## Examples of lambda translation
 
 ### SKI combinators
