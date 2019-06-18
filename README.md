@@ -21,6 +21,20 @@
 * user defined binary operators is supported, with fixity direction and level
 * specific rewriting logic for new syntax operators can be defined by user
 
+# Docs
+
+# Shugar rules
+
+<pre>
+
+a >> b
+--------------- shugar
+! a[c] . b{c}
+
+</pre>
+
+# How to build
+
 ## Environment
 
 It's highly recommended to [install Nix](https://nixos.org/nix/download.html).
