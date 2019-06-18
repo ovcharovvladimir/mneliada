@@ -25,7 +25,7 @@
 
 ## Fixity table
 
-| ** Prec ** | ** Left associative ** | ** Non-associative ** | ** Right associative ** |
+| **.Prec.** | **.Left associative.** | **Non-associative** | **Right associative** |
 |------|------------------|-----------------|-------------------|
 | 9    |                  |                 |                   |
 | 8    |                  |                 |                   |
@@ -40,7 +40,7 @@
 
 ## Syntax operators
 
-| ** Operator ** | ** Description ** |
+| **Operator** | **Description** |
 |----------|-------------|
 | `.`        | Bind        |
 | `\`        | Lambda      |
