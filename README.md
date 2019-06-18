@@ -53,11 +53,15 @@
 
 ## Shugar rules
 
-```
-a >> b
--------------
-! a[c] . b{c}
-```
+| **Before**\ \ \  | **After** |
+|----------|----------|
+| `a >> b` | `! a[c] . b{c}` |
+| `a[b]{c}` | `a[b] . a{c}` |
+| `a{b}[c]` | `a{b} . a[c]` |
+| `a[b | c]` | `a[b] | a[c]` |
+| `a[b . c]` | `a[b] . a[c]` |
+| `a[b + c]` | `a[b] + a[c]` |
+| `a[[b]]` | `a[c] . c[b]` |
 
 ## Examples of lambda translation
 
