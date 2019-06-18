@@ -23,7 +23,8 @@
 
 # Docs
 
-## Fixity table
+Fixity table
+------------
 
 | **Prec**\ \ \  | **Left**\ \ \            | **Prefix**\ \ \                |  **Right**                 |
 |------|------------------|-----------------|-------------------|
@@ -39,7 +40,8 @@
 |      |                  | `\`               |                   |
 | Low  |                  |                 |                    |
 
-## Syntax operators
+Syntax operators
+----------------
 
 | **Syntax**\ \ \         | **Descr**            |
 |----------|-------------|
@@ -51,7 +53,8 @@
 | `a[b]`     | receive channel from channel `a` and bind it to `b` |
 | `_[a]`    | create scoped fresh channel `a` |
 
-## Shugar rules
+Shugar rules
+------------
 
 | **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
@@ -66,7 +69,8 @@
 
 
 
-## Examples of lambda translation
+Examples of lambda translation
+------------------------------
 
 ### SKI combinators
 
