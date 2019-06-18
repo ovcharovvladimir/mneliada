@@ -25,7 +25,7 @@
 
 ## Fixity table
 
-| Prec\ \  | Left\_\_                 | Prefix\_\_                |  Right                 |
+| Prec\ \ \  | Left\             | Prefix\ \                 |  Right                 |
 |------|------------------|-----------------|-------------------|
 | High |                  |                 |                   |
 |      |                  |                 |                   |
