@@ -23,6 +23,8 @@
 
 # Docs
 
+## Types
+
 ## Fixity table
 
 | **Prec**\ \ \  | **Left**\ \ \            | **Prefix**\ \ \                |  **Right**                 |
@@ -52,20 +54,25 @@
 | `a{b}`     | send channel `b` to channel `a` |
 | `a[b]`     | receive channel from channel `a` and bind it to `b` |
 | `_[a]`    | create scoped fresh channel `a` |
+| `123 : Int` | Number `123` of type `Int` |
+| `123 : Float` | Number `123` of type `Float` |
 
 ---
 
-## Shugar rules
+## Example of shugar rules transformations (compile time)
 
 | **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
-| `a >> b` | `! a[c] . b{c}` |
-| `a[b]{c}` | `a[b] . a{c}` |
-| `a{b}[c]` | `a{b} . a[c]` |
-| `a[b | c]` | `a[b] | a[c]` |
-| `a[b . c]` | `a[b] . a[c]` |
-| `a[b + c]` | `a[b] + a[c]` |
-| `a[[b]]` | `a[c] . c[b]` |
+| `a >> b  ` | `( ! a[c] . b{c} )` |
+| `a[b]{c} ` | `( a[b] . a{c} )` |
+| `a{b}[c] ` | `( a{b} . a[c] )` |
+| `a[b | c]` | `( a[b] | a[c] )` |
+| `a[b . c]` | `( a[b] . a[c] )` |
+| `a[b + c]` | `( a[b] + a[c] )` |
+| `a[[b]]  ` | `( a[c] . c[b] )` |
+| `a[[b] . c]  ` | `( a[d] . d[b] . a[c] )` |
+| `1 + 2` | `3` |
+| `"Hello" . " " . "world"` | `"Hello world"` |
 
 ---
 
@@ -81,6 +88,22 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . x >> b
 _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 
 ```
+
+---
+
+## Example code
+
+```
+
+! complex[a : ADT] . a[b : Number] . a{ Real{b} * Imag{b} }
+
+! expr[a : GADT] . a[Int]{I{Int}} | a[Int]{B{Int}}
+
+! elem[b] . _[a] . complex{a} . a{Float} . a >> b
+
+
+```
+
 
 ---
 
