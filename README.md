@@ -23,8 +23,7 @@
 
 # Docs
 
-Fixity table
-------------
+## Fixity table
 
 | **Prec**\ \ \  | **Left**\ \ \            | **Prefix**\ \ \                |  **Right**                 |
 |------|------------------|-----------------|-------------------|
@@ -40,8 +39,9 @@ Fixity table
 |      |                  | `\`               |                   |
 | Low  |                  |                 |                    |
 
-Syntax operators
-----------------
+---
+
+## Syntax operators
 
 | **Syntax**\ \ \         | **Descr**            |
 |----------|-------------|
@@ -53,8 +53,9 @@ Syntax operators
 | `a[b]`     | receive channel from channel `a` and bind it to `b` |
 | `_[a]`    | create scoped fresh channel `a` |
 
-Shugar rules
-------------
+---
+
+## Shugar rules
 
 | **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
@@ -66,11 +67,9 @@ Shugar rules
 | `a[b + c]` | `a[b] + a[c]` |
 | `a[[b]]` | `a[c] . c[b]` |
 
+---
 
-
-
-Examples of lambda translation
-------------------------------
+## Examples of lambda translation
 
 ### SKI combinators
 
@@ -82,6 +81,8 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . x >> b
 _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 
 ```
+
+---
 
 # How to build
 
