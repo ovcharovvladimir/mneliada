@@ -25,18 +25,18 @@
 
 ## Fixity table
 
-| Prec | Left associative | Non-associative | Right associative |
+| `Prec` | `Left associative` | `Non-associative` | `Right associative` |
 |------|------------------|-----------------|-------------------|
 | 9    |                  |                 |                   |
 | 8    |                  |                 |                   |
 | 7    |                  |                 |                   |
-| 6    |                  |                 | `* \|`              |
-| 5    |                  |                 | . >>              |
-| 4    |                  |                 | +                 |
-| 3    |                  | !               |                   |
+| 6    |                  |                 | `*` `|`           |
+| 5    |                  |                 | `.` `>>`              |
+| 4    |                  |                 | `+`                 |
+| 3    |                  | `!`               |                   |
 | 2    |                  |                 |                   |
 | 1    |                  |                 |                   |
-| 0    |                  | \               |                   |
+| 0    |                  | `\`               |                   |
 
 ## Syntax operators
 
