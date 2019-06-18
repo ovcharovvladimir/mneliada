@@ -61,7 +61,7 @@
 
 ## Example of shugar rules transformations (compile time)
 
-| **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
+| **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
 | `a >> b  ` | `( ! a[c] . b{c} )` |
 | `a[b]{c} ` | `( a[b] . a{c} )` |
@@ -73,6 +73,7 @@
 | `a[[b] . c]  ` | `( a[d] . d[b] . a[c] )` |
 | `1 + 2` | `3` |
 | `"Hello" . " " . "world"` | `"Hello world"` |
+| `a[[b]{c}]` | `a[d] . d[b] . d{c}` |
 
 ---
 
@@ -95,11 +96,16 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 
 ```
 
-! complex[a : ADT] . a[b : Number] . a{ Real{b} * Imag{b} }
+| ! complex[a : ADT] . a[b : Number] . a{ Real{b} * Imag{b} }
 
-! expr[a : GADT] . a[Int]{I{Int}} | a[Int]{B{Int}}
+| ! expr[a : GADT] . a[Int]{I{Int}} | a[Int]{B{Int}}
 
-! elem[b] . _[a] . complex{a} . a{Float} . a >> b
+| ! elem[b] . _[a] . complex{a} . a{Float} . a >> b
+
+| ! Complex {
+  | ! t >> complex
+  | ! add[ [ Real{a} * Imag{b} . Real{c} * Imag{d} ] { Real{a + c} * Imag{b + d} } ]
+  }
 
 
 ```
