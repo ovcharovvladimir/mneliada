@@ -25,13 +25,13 @@
 
 # Shugar rules
 
-``
+```
 
 a >> b
 --------------- shugar
 ! a[c] . b{c}
 
-``
+```
 
 # How to build
 
