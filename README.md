@@ -61,7 +61,7 @@
 
 ## Example of shugar rules transformations (compile time)
 
-| **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
+| **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
 | `a >> b  ` | `( ! a[c] . b{c} )` |
 | `a[b]{c} ` | `( a[b] . a{c} )` |
