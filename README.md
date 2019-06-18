@@ -29,14 +29,26 @@
 |------|------------------|-----------------|-------------------|
 | 9    |                  |                 |                   |
 | 8    |                  |                 |                   |
-| 7    |          1       |         1       |   1               |
-| 6    |                  |                 |                   |
-| 5    |          1       |         1       |   1               |
-| 4    |                  |                 |                   |
-| 3    |                  |                 |                   |
+| 7    |                  |                 |                   |
+| 6    |                  |                 | *                 |
+| 5    |                  |                 | . >>              |
+| 4    |                  |                 | +                 |
+| 3    |                  | !               |                   |
 | 2    |                  |                 |                   |
 | 1    |                  |                 |                   |
-| 0    |                  |                 |                   |
+| 0    |                  | \               |                   |
+
+## Syntax operators
+
+| Operator | Description |
+|----------|-------------|
+| .        | Bind        |
+| \        | Lambda      |
+| !        | Of course   |
+| >>       | Pipe        |
+| a{b}     | send channel b to channel a |
+| a[b]     | receive channel from channel a and bind it to b |
+| \_[a]    | create scoped fresh channel a |
 
 ## Shugar rules
 
