@@ -25,7 +25,7 @@
 
 ## Fixity table
 
-| Prec :  | : Left :                 | : Prefix :                |  : Right                 |
+| Prec\_\_ | Left\_\_                 | Prefix\_\_                |  Right                 |
 |------|------------------|-----------------|-------------------|
 | High |                  |                 |                   |
 |      |                  |                 |                   |
@@ -41,7 +41,7 @@
 
 ## Syntax operators
 
-| Syntax :         | : Descr            |
+| Syntax\_\_         | Descr            |
 |----------|-------------|
 | `.`        | Bind        |
 | `\`        | Lambda      |
