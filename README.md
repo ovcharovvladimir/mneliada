@@ -80,12 +80,12 @@
 ---
 
 ```
-! a
+! a     # Before
 ! b
 ! c
 ```
 ```
-| ! a
+| ! a   # After
 | ! b
 | ! c
 ```
@@ -110,6 +110,7 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 ## Example code
 
 ```
+#!/usr/bin/env mneliada
 
 ! hex[{ 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F }]
 
@@ -140,6 +141,13 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 
 # Example of GADT expression
 ! expr[ [a : hex]{ HexExpr{a} } | [a : uint32]{ Uint32Expr{a} } ]
+
+
+#{
+
+This is multiline comment
+
+#}
 
 
 ```
