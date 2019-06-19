@@ -27,19 +27,19 @@
 
 ## Fixity table
 
-| **Prec**\ \ \  | **Left**\ \ \            | **Prefix**\ \ \                |  **Right**                 |
-|------|------------------|-----------------|-------------------|
-| High |                  |                 |                   |
-|      |                  |                 |                   |
-|      |                  |                 |                   |
-|      |                  |                 | `*` `|`           |
-|      |                  |                 | `.` `>>`              |
-|      |                  |                 | `+`                 |
-|      |                  | `!`               |                   |
-|      |                  |                 |                   |
-|      |                  |                 |                   |
-|      |                  | `\`               |                   |
-| Low  |                  |                 |                    |
+| **Prec**\ \ \  | **Left**\ \ \  | **Prefix**\ \ \  |  **Right** |
+|------|---|-----|----------|
+| High |   |     |          |
+|      |   |     |          |
+|      |   |     |          |
+|      |   |     | `*` `|`  |
+|      |   |     | `.` `>>` |
+|      |   |     | `+`      |
+|      |   | `!` |          |
+|      |   |     |          |
+|      |   |     |          |
+|      |   | `\` |          |
+| Low  |   |     |          |
 
 ---
 
@@ -79,9 +79,16 @@
 
 ---
 
-|       |      |
-|-------|------|
-| ``! a! b\n! c`` | ``! a | ! b | ! c`` |
+```
+! a
+! b
+! c
+```
+```
+| ! a
+| ! b
+| ! c
+```
 
 ---
 
@@ -236,8 +243,3 @@ Then user groups for non-privileged users should be enabled:
 sysctl kernel.unprivileged_userns_clone=1
 ```
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
