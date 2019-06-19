@@ -74,6 +74,20 @@
 | `1 + 2` | `3` |
 | `"Hello" . " " . "world"` | `"Hello world"` |
 | `a[[b]{c}]` | `a[d] . d[b] . d{c}` |
+| `:t` | `(_ : t)` |
+
+```
+! a
+! b
+! c
+
+```
+====>
+```
+| ! a
+| ! b
+| ! c
+```
 
 ---
 
@@ -96,16 +110,35 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 
 ```
 
-| ! complex[a : ADT] . a[b : Number] . a{ Real{b} * Imag{b} }
+! hex[{ 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F }]
 
-| ! expr[a : GADT] . a[Int]{I{Int}} | a[Int]{B{Int}}
+! byte[{ :hex . :hex }]
 
-| ! elem[b] . _[a] . complex{a} . a{Float} . a >> b
+! uint32[{ :byte . :byte . :byte . :byte }]
 
-| ! Complex {
-  | ! t >> complex
-  | ! add[ [ Real{a} * Imag{b} . Real{c} * Imag{d} ] { Real{a + c} * Imag{b + d} } ]
+! option[[a] { None | Some{a} }]
+
+! Number [
+  ? t [{ :Type }]
+  ? add [[ :t * :t ] { :t }]
+  ? mul [[ :t * :t ] { :t }]
+  + ( ? of_int32 [[ :uint32 ] { :t }]
+      ? to_int32 [[ :t ] { _ : uint32 option }]
+    )
+] {
+  ! Shugar {
+    ! (+) >> add
+    ! (*) >> mul
   }
+}
+
+! Complex {
+  ! t [[a : Number] { C{a . a} }]
+  ! add [[ C{a.b} . C{c.d} ] { C{(a+c) . (b+d)} }]
+}
+
+# Example of GADT expression
+! expr[ [a : hex]{ HexExpr{a} } | [a : uint32]{ Uint32Expr{a} } ]
 
 
 ```
