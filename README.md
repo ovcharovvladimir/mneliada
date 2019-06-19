@@ -21,7 +21,7 @@
 * user defined binary operators is supported, with fixity direction and level
 * specific rewriting logic for new syntax operators can be defined by user
 
-# ![Proof search as execution](./mneliada/raw-file/docs/ps.jpg)
+# ![Proof search as execution](./mneliada/raw-file/docs/ps.png)
 
 # Docs
 
