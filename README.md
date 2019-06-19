@@ -81,7 +81,7 @@
 
 |       |      |
 |-------|------|
-| ``! a\n! b\n! c`` | ``! a | ! b | ! c`` |
+| ``! a! b\n! c`` | ``! a | ! b | ! c`` |
 
 ---
 
@@ -234,4 +234,10 @@ Then user groups for non-privileged users should be enabled:
 
 ```shell
 sysctl kernel.unprivileged_userns_clone=1
+```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
 ```
