@@ -45,21 +45,21 @@
 
 ## Syntax operators
 
-| **Syntax**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \        | **Descr**            |
-|----------|-------------|
-| `.`        | Bind        |
-| `\`        | Lambda      |
-| `!`        | Of course   |
-| `>>`       | Pipe        |
-| `a{b}`     | send channel `b` to channel `a` |
-| `a[b]`     | receive channel from channel `a` and bind it to `b` |
-| `_[a]`    | create scoped fresh channel `a` |
-| `123 : Int` | Number `123` of type `Int` |
-| `123 : Float` | Number `123` of type `Float` |
+| **Syntax**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **Descr** |
+|---------------|-----------------------------------------------------|
+| `.`           | Bind                                                |
+| `\`           | Lambda                                              |
+| `!`           | Of course                                           |
+| `>>`          | Pipe                                                |
+| `a{b}`        | send channel `b` to channel `a`                     |
+| `a[b]`        | receive channel from channel `a` and bind it to `b` |
+| `_[a]`        | create scoped fresh channel `a`                     |
+| `123 : fnt`   | Number `123` of type `int`                          |
+| `123 : float` | Number `123` of type `float`                        |
 
 ---
 
-## Example of shugar rules transformations (compile time)
+## Example of shugar rules transformations application (can be done at compile time)
 
 | **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
 |----------|----------|
@@ -142,7 +142,6 @@ _[i] . expr | ! _[a] . i{a} | ! _[b] . a{b} | a[x] . ! x[c] . b{c}
 # Example of GADT expression
 ! expr[ [a : hex]{ HexExpr{a} } | [a : uint32]{ Uint32Expr{a} } ]
 
-
 #{
 
 This is multiline comment
@@ -151,7 +150,6 @@ This is multiline comment
 
 
 ```
-
 
 ---
 
