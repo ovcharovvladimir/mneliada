@@ -1,0 +1,12 @@
+module-item-spacing=compact
+doc-comments=before
+ocp-indent-compat=true
+break-sequences=true
+type-decl=sparse
+let-and=sparse
+field-space=loose
+extension-sugar=always
+max-iters=3
+quiet=true
+cases-exp-indent=4
+leading-nested-match-parens=true
