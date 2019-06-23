@@ -1,4 +1,4 @@
-# ![M N E Li Ad A](./raw-file/docs/MNELIADA.png)
+# ![M N E Li Ad A](https://hub.darcs.net/Fayonnagan_Piker/mneliada/raw-file/docs/MNELIADA.png)
 
 * Multiplicative
 * Non Commutative
@@ -21,7 +21,7 @@
 * user defined binary operators is supported, with fixity direction and level
 * specific rewriting logic for new syntax operators can be defined by user
 
-# ![Proof search as execution](./raw-file/docs/ps.png)
+# ![Proof search as execution](https://hub.darcs.net/Fayonnagan_Piker/mneliada/raw-file/docs/MNELIADA.png)
 
 ## Example code
 
