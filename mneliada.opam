@@ -20,7 +20,8 @@ install: ["opam" "config" "exec" "--" "dune" "install"]
 run-test: ["dune" "runtest" "-p" name]
 depends: [
   "ppx_implicits" {build & = "hg"}
-  "ppx_monadic" {build}
+  "ppx_monadic"
+  "zarith"
 ]
 pin-depends: [
   ["ppx_implicits.hg" "hg+https://bitbucket.org/Kamiel/ppx_implicits#76683cc35f69f7a152cbb65f3ae417acfe3b5adb"]

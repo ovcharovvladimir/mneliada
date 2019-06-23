@@ -1,7 +1,7 @@
 export TERM ?= linux
 export OPAMSOLVERTIMEOUT = 120
 
-PKGS := $(shell git ls-files '*.opam' |  sed -e 's|^|./|')
+PKGS := $(shell darcs show files | grep '.*\.opam' |  sed -e 's|^|./|')
 
 AT_NIX_DEF = at_nix() { \
 	INTERACTIVE="$$1" ; \
