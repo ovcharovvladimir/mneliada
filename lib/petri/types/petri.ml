@@ -33,4 +33,6 @@ type _ t +=
       * [> `Petri of [< `Tranz]] t
       -> [`Petri of [`Place]] t
   | State : [> `State of 'a] t * ([> `Petri of 'a] as 'b) t -> 'b t
+  | Share : int * ([> `Petri of [< `Place | `Tranz]] as 'b) t -> 'b t
+  | Link : int -> [> `Petri of [< `Place | `Tranz]] t
   | Term : [> `Petri of [< `Place | `Tranz]] t
