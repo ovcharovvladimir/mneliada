@@ -27,7 +27,7 @@ AT_NIX_NI = $(AT_NIX_DEF); at_nix ""
 DONE = @printf "  🛠️  \033[33m%s\033[0m\n" "[$@] done"
 
 .PHONY: default repl repl-lite console format test-format build watch setup sync \
-	lock update upgrade install uninstall test run clean erase index docs
+	lock update upgrade install uninstall test run clean erase index docs submodules
 
 default: all
 
@@ -54,6 +54,9 @@ test-format: ## Check is sources formatted
 		--display=quiet --no-buffer -j 1 --diff-command \
 		\"colordiff -y --suppress-common-lines\"
 	$(DONE)
+
+submodules:
+	@find [a-z]* -name ".submodules" -exec sh -c 'test -f {}/update.sh && cd {} && sh update.sh' \;
 
 build: ## Build project
 	@$(AT_NIX) opam config exec -- dune build "$(LIB)"
