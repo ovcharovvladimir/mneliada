@@ -14,7 +14,7 @@ curl https://nixos.org/nix/install | sh
 
 - TL;DR:
 ```shell
-make setup && make test
+make setup && make submodules && make test
 make build && scripts/run random_render --help
 ```
 
