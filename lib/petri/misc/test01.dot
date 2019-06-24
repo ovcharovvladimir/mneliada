@@ -1,0 +1,16 @@
+digraph {
+
+ P1 [shape="circle", label="1"]
+ P2 [shape="circle", label=" "]
+ P3 [shape="circle", label=" "]
+ T1 [shape="record", style=filled, fillcolor="black", fixedsize=true, height=0.1, label="{{|<i>|}|{|<o>|}}"]
+ T2 [shape="record", style=filled, fillcolor="black", fixedsize=true, height=0.1, label="{{|<i>|}|{|<o>|}}"]
+
+ P1 -> T1:i
+ T1:o -> P2
+ T1:o -> P3
+ P2 -> T2:i
+ P3 -> T2:i
+ T2:o -> P1
+
+}
