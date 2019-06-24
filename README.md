@@ -1,4 +1,4 @@
-# ![M N E Li Ad A](https://hub.darcs.net/Fayonnagan_Piker/mneliada/raw-file/docs/MNELIADA.png)
+# ![M N E Li Ad A](https://github.com/ovcharovvladimir/mneliada/raw/master/docs/MNELIADA.png)
 
 * Multiplicative
 * Non Commutative
@@ -21,7 +21,7 @@
 * user defined binary operators is supported, with fixity direction and level
 * specific rewriting logic for new syntax operators can be defined by user
 
-# ![Proof search as execution](https://hub.darcs.net/Fayonnagan_Piker/mneliada/raw-file/docs/ps.png)
+# ![Proof search as execution](https://github.com/ovcharovvladimir/mneliada/raw/master/docs/ps.png)
 
 ## Example code
 
@@ -72,17 +72,13 @@ This is multiline comment
 
 ## Fixity table
 
-| **Prec**\ \ \  | **Left**\ \ \  | **Prefix**\ \ \  |  **Right** |
+| **Prec**  | **Left**  | **Prefix**  |  **Right** |
 |------|---|-----|----------|
 | High |   |     |          |
-|      |   |     |          |
-|      |   |     |          |
 |      |   |     | `*` `|`  |
 |      |   |     | `.` `>>` |
 |      |   |     | `+`      |
 |      |   | `!` |          |
-|      |   |     |          |
-|      |   |     |          |
 |      |   | `\` |          |
 | Low  |   |     |          |
 
@@ -90,7 +86,7 @@ This is multiline comment
 
 ## Syntax operators
 
-| **Syntax**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **Descr** |
+| **Syntax** | **Descr** |
 |---------------|-----------------------------------------------------|
 | `.`           | Bind                                                |
 | `\`           | Lambda                                              |
@@ -106,7 +102,7 @@ This is multiline comment
 
 ## Example of shugar rules transformations application (can be done at compile time)
 
-| **Before**\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  | **After** |
+| **Before** | **After** |
 |----------|----------|
 | `a >> b  ` | `( ! a[c] . b{c} )` |
 | `a[b]{c} ` | `( a[b] . a{c} )` |
