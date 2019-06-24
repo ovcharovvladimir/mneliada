@@ -1,5 +1,6 @@
 open Types__Agent
 include Types__Petri__
+module L = Types__Link
 
 type _ t +=
   | TR10 : [> `Petri of [< `Place]] t -> [`Petri of [`Tranz]] t
@@ -33,6 +34,6 @@ type _ t +=
       * [> `Petri of [< `Tranz]] t
       -> [`Petri of [`Place]] t
   | State : [> `State of 'a] t * ([> `Petri of 'a] as 'b) t -> 'b t
-  | Share : int * ([> `Petri of [< `Place | `Tranz]] as 'b) t -> 'b t
-  | Link : int -> [> `Petri of [< `Place | `Tranz]] t
+  | Share : 'b L.t * ([> `Petri of [< `Place | `Tranz]] as 'b) t -> 'b t
+  | Link : 'a L.t -> ([> `Petri of [< `Place | `Tranz]] as 'a) t
   | Term : [> `Petri of [< `Place | `Tranz]] t
