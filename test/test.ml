@@ -1,3 +1,1 @@
-let () =
-  Printf.printf "\n" ;
-  Printf.printf "ok\n"
+let () = Petri.Graphviz.run_test ()

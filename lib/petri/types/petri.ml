@@ -37,3 +37,4 @@ type _ t +=
   | Share : 'b L.t * ([> `Petri of [< `Place | `Tranz]] as 'b) t -> 'b t
   | Link : 'a L.t -> ([> `Petri of [< `Place | `Tranz]] as 'a) t
   | Term : [> `Petri of [< `Place | `Tranz]] t
+  | Poly : [> `Petri of [< `Place | `Tranz]] t -> [`Petri] t
